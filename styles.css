@@ -1,6 +1,5 @@
-*{
-    margin: 0;
-    padding:0;
+*,::before, ::-webkit-textfield-decoration-container{
+    
     box-sizing: border-box;
 }
 
@@ -10,11 +9,17 @@ body{
     font-family: Arial, sans-serif;
     font-size: 24px;
     font-weight: bold;
+    margin: 0;
+    padding:0;
+    background:linear-gradient(0deg,#04e0e0 , #013d3d, #047979);
+  
 }
+
 .main{
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 .main--container{
     display: flex;
@@ -60,7 +65,27 @@ body{
     gap:15px;
     height: 380px;
 }
-.number,.operator{
+.number,.operator,.dot,.equate{
     border-radius: 5px;
     box-shadow: 0 0 4px rgba(0,0, 0, 0.5);
+}
+.button{
+width:70px;
+height:70px;
+border:solid #000 1px;
+font-weight: bold;
+font-size: 24px;
+cursor: pointer;
+}
+.operator,.delete,.clear{
+width:70px;
+height:48px;
+border:solid #000 1px;
+font-weight: bold;
+font-size: 24px;
+cursor: pointer;
+}
+
+.button:hover,.operator:hover,.delete:hover,.clear:hover{
+    transform: scale(.98);
 }
