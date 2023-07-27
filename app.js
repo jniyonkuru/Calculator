@@ -23,7 +23,7 @@ operatorButton.setAttribute("class","operator button");
 clearButton.setAttribute("class"," operator clear");
 deleteButton.setAttribute("class","operator delete");
 clearButton.innerText='AC';
-deleteButton.textContent='C';
+deleteButton.innerText='C';
 
 //number button
 numberButton.setAttribute("class","number button");
@@ -83,6 +83,7 @@ for(number of ArrayNumbers){
 for(operator of ArrayOperators){
     operator.addEventListener('click',function recordOperator(e){
             operator=this.value;
+            if(isNaN(parseFloat(input.value)))return;
             number1=parseFloat(input.value);
             input.value='';
     })
@@ -120,7 +121,7 @@ function operate(){
        return;
     }
 
-    console.log(operator);
+    console.log(number2);
     
  switch(operator){
      case'+':
